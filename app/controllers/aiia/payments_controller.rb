@@ -2,7 +2,7 @@ require_dependency "aiia/application_controller"
 
 module Aiia
   class PaymentsController < ApplicationController
-    before_action :set_payment, only: [:show, :edit, :update, :destroy]
+    before_action :set_payment, only: [:pay,:show, :edit, :update, :destroy]
 
     # GET /payments
     def index
@@ -13,9 +13,15 @@ module Aiia
     def show
     end
 
+		def pay
+			@payment.payi!
+		end
+
     # GET /payments/new
     def new
       @payment = Payment.new
+			@payment.context = params[:context]
+			@payment.amount = params[:amount]
     end
 
     # GET /payments/1/edit
