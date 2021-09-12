@@ -1,5 +1,5 @@
 Aiia::Engine.routes.draw do
-  resources :payments
+  resources :payments do
 		member do
 			post "pay"
 		end
