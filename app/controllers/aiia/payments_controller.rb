@@ -14,7 +14,7 @@ module Aiia
     end
 
 		def pay
-			@payment.payi!
+			@payment.pay!
 		end
 
     # GET /payments/new

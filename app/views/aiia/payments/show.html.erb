@@ -10,5 +10,10 @@
   <%= @payment.amount %>
 </p>
 
+
+<p>
+<%=button_to "Pay", pay_payment_path(@payment)%>
+</p>
+
 <%= link_to 'Edit', edit_payment_path(@payment) %> |
 <%= link_to 'Back', payments_path %>

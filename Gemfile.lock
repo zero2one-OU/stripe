@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    aiia (0.1.4)
+    aiia (0.1.5)
       rails (~> 6.1.4, >= 6.1.4.1)
 
 GEM
