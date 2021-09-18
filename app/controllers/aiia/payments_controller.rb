@@ -15,6 +15,7 @@ module Aiia
 
 		def pay
 			@payment.pay!
+			redirect_to @payment.callback
 		end
 
     # GET /payments/new
@@ -22,6 +23,9 @@ module Aiia
       @payment = Payment.new
 			@payment.context = params[:context]
 			@payment.amount = params[:amount]
+			@payment.callback = params[:callback]
+			@payment.save
+			redirect_to @payment
     end
 
     # GET /payments/1/edit
