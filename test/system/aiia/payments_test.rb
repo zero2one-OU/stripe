@@ -1,6 +1,6 @@
 require "application_system_test_case"
 
-module Aiia
+module Stripe
   class PaymentsTest < ApplicationSystemTestCase
     setup do
       @payment = aiia_payments(:one)

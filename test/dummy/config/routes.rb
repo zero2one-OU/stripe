@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  mount Aiia::Engine => "/aiia"
+  mount Stripe::Engine => "/stripe"
 end

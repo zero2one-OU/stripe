@@ -1,4 +1,4 @@
-Aiia::Engine.routes.draw do
+Stripe::Engine.routes.draw do
   resources :payments do
 		member do
 			post "pay"
